@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Captive Portal Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #1677dd;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Network Login</h2>
+
+    <p>Captive Portal Laboratory</p>
+
+    <p><strong>Simulation only:</strong>
+       Do not enter real credentials.</p>
+
+    <input id="username" placeholder="Test username">
+
+    <input id="password"
+           type="password"
+           placeholder="Dummy test password">
+
+    <button type="button" id="submit">Simulate login</button>
+
+    <p id="result"></p>
+
+</div>
+
+<script>
+document.getElementById("submit").addEventListener("click", () => {
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
+
+    document.getElementById("result").textContent =
+        "Simulation completed. No information was transmitted or stored.";
+});
+</script>
+
+</body>
+</html>
